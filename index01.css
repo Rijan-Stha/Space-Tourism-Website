@@ -1,0 +1,79 @@
+/* ---------- */
+/* ---Resetting---- */
+/* ---------- */
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+/* Resetting default margin */
+body,
+h1,h2,h3,h5,h4,h6,
+dl,dd,
+picture{
+    margin:0;
+}
+
+body{
+    line-height: 1.5;
+    min-width: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+ul[role="list"],ol[role="list"]{
+    list-style: none;
+}
+
+img,picture{
+    max-width: 100%;
+    display: block;
+}
+
+input,textarea,select,option{
+    font:inherit;
+}
+
+@media(prefers-reduced-motion:reduce){
+    html:focus-within{
+        scroll-behavior: smooth;
+    }
+
+    html{
+        animation-time:.1ms !important;
+        transition-time:.1ms !important;
+        scroll-behavior: smooth;
+    }
+}
+
+/* Utility Classes */
+.flex{
+    display: flex;
+    gap:var(--gap,1rem);
+}
+.grid{
+    display: grid;
+    gap:var(--gap,1rem);
+}
+.sr-only{
+    position:absolute;
+    margin:-1px;
+    padding:0;
+    width:1px;
+    height: 1px;
+    white-space: nowrap;
+    clip:rect(0,0,0,0);
+    overflow:hidden;
+    border:0;
+}
+
+.container{
+    max-width: 80rem;
+    padding-inline:2rem;
+    margin-inline:auto;
+}
